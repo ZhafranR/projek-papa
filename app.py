@@ -7,7 +7,7 @@ import numpy as np
 import folium
 from folium import plugins
 from flask import Flask
-import branca
+import branca, os
 
 df = pd.read_excel('Test TTI.xlsx')
 margin = .2 # dalam skala 0-1
@@ -196,4 +196,5 @@ def index():
 
 
 if __name__ == "__main__":
-        app.run()
+    port = int(os.environ.get('PORT', 5000))
+    app.run(port=port)
