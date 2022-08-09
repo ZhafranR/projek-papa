@@ -3,3 +3,4 @@ numpy==1.21.6
 folium==0.12.1.post1
 Flask==2.1.2
 branca==0.5.0
+gunicorn==19.5.0
